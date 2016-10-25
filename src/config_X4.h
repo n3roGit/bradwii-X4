@@ -98,11 +98,11 @@ void x4_set_leds(unsigned char state);
 #define HIGH_RATES_MULTILIER 2.0
 
 // Choose maximum tilt angles when in level mode
-#define LEVEL_MODE_MAX_TILT 55  // 55 degrees
-#define LEVEL_MODE_MAX_TILT_HIGH_ANGLE 80       // 80 degrees when high angle checkbox active
+#define LEVEL_MODE_MAX_TILT 70  // 55 degrees
+#define LEVEL_MODE_MAX_TILT_HIGH_ANGLE 95       // 80 degrees when high angle checkbox active
 
 // Choose maximum tilt angles while navigating. This will determine how fast it moves from point to point.
-#define NAVIGATION_MAX_TILT 8   //15 degrees
+#define NAVIGATION_MAX_TILT 15   //15 degrees
 
 // Choose output ranges (in microseconds)
 #define MIN_MOTOR_OUTPUT 1000
@@ -111,10 +111,10 @@ void x4_set_leds(unsigned char state);
 
 // Un-comment and set to YES or NO to override the default value.
 // When YES, motors will stop when throttle stick is below STICK_RANGE_LOW (see below) and not in acro or semi acro mode.
-#define MOTORS_STOP YES
+#define MOTORS_STOP NO
 
 // set the minimum motor output when armed. If not set, 1067 will be used as a default
-#define ARMED_MIN_MOTOR_OUTPUT 1025     // motors spin slowly when armed
+#define ARMED_MIN_MOTOR_OUTPUT 1050     // motors spin slowly when armed
 //#define ARMED_MIN_MOTOR_OUTPUT 1170 // motors spin slowly when armed (for blheli flashed q-brain)
 
 // Optionally set an offset from RX Input to ESC output.  Usually used to make sure
@@ -151,7 +151,7 @@ void x4_set_leds(unsigned char state);
 #define ESC_CALIB_HIGH MAX_MOTOR_OUTPUT
 
 // un-comment if you don't want to include autotune code
-#define NO_AUTOTUNE
+//#define NO_AUTOTUNE
 
 // To adjust how agressive the tuning is, adjust the AUTOTUNEMAXOSCILLATION value.  A larger
 // value will result in more agressive tuning. A lower value will result in softer tuning.
@@ -179,7 +179,7 @@ void x4_set_leds(unsigned char state);
 // A value of zero is no gain scheduling.  A value of 1.0 (the default) results in 50% gains at zero throttle, 100% gains at mid
 // throttle, and 150% gains at full throttle.
 // Range is 0 to 2.0
-//#define GAIN_SCHEDULING_FACTOR 1.0
+#define GAIN_SCHEDULING_FACTOR 2.0
 
 // Uncomment if using DC motors
 #define DC_MOTORS

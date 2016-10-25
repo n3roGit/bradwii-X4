@@ -30,19 +30,19 @@ void x4_set_usersettings()
     usersettings.maxpitchandrollrate = 400L << FIXEDPOINTSHIFT; // degrees per second
     
     // pitch PIDs
-    usersettings.pid_pgain[PITCHINDEX] = 35L << 3;
-    usersettings.pid_igain[PITCHINDEX] = 4L;
-    usersettings.pid_dgain[PITCHINDEX] = 22L << 2;
+    usersettings.pid_pgain[PITCHINDEX] = 30L << 3;
+    usersettings.pid_igain[PITCHINDEX] = 25L;
+    usersettings.pid_dgain[PITCHINDEX] = 35L << 2;
 
     // roll PIDs
-    usersettings.pid_pgain[ROLLINDEX] = 35L << 3;
-    usersettings.pid_igain[ROLLINDEX] = 4L;
-    usersettings.pid_dgain[ROLLINDEX] = 22L << 2;
+    usersettings.pid_pgain[ROLLINDEX] = 30L << 3;
+    usersettings.pid_igain[ROLLINDEX] = 25L;
+    usersettings.pid_dgain[ROLLINDEX] = 35L << 2;
 
     // yaw PIDs
-    usersettings.pid_pgain[YAWINDEX] = 100L << 3;
-    usersettings.pid_igain[YAWINDEX] = 0L;
-    usersettings.pid_dgain[YAWINDEX] = 22L << 2;
+    usersettings.pid_pgain[YAWINDEX] = 35L << 3;
+    usersettings.pid_igain[YAWINDEX] = 25L;
+    usersettings.pid_dgain[YAWINDEX] = 25L << 2;
 
     for (int x = 0; x < NUMPOSSIBLECHECKBOXES; ++x) {
         usersettings.checkboxconfiguration[x] = 0;
@@ -61,6 +61,11 @@ void x4_set_usersettings()
     // default for H107 stock TX 
     //usersettings.checkboxconfiguration[CHECKBOXSEMIACRO] = CHECKBOXMASKAUX1LOW;
     //usersettings.checkboxconfiguration[CHECKBOXHIGHANGLE] = CHECKBOXMASKAUX1LOW; // uncomment for high angle
+		
+		
+		//acro after arming
+		//usersettings.checkboxconfiguration[CHECKBOXFULLACRO] = CHECKBOXMASKAUX1LOW;
+
 }
 
 void x4_init_leds()

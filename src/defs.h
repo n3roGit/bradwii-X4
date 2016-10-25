@@ -59,7 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifndef THROTTLE_TO_MOTOR_OFFSET
-#define THROTTLE_TO_MOTOR_OFFSET 0      // motors spin slowly when armed
+#define THROTTLE_TO_MOTOR_OFFSET 1      // motors spin slowly when armed
 #endif
 // by default don't allow the motors to stop when armed if not in acro or semi acro mode
 #ifndef MOTORS_STOP
